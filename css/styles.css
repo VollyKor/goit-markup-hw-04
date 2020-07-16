@@ -47,7 +47,8 @@ html {
 }
 
 *,
-*::before *::after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -94,13 +95,18 @@ a {
   padding-bottom: 94px;
 }
 
+.flex-box,
+.nav-list {
+  display: flex;
+}
+
+svg {
+  display: block;
+}
+
 /* index.html */
 
 /* Header */
-
-.flex-box {
-  display: flex;
-}
 
 .container {
   width: 1200px;
@@ -113,8 +119,8 @@ a {
 .header-logo {
   display: block;
 
-  padding-top: 23px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin-right: 85px;
 
   font-family: "Raleway", sans-serif;
@@ -131,6 +137,7 @@ a {
 
 .nav {
   display: flex;
+  align-items: center;
 
   color: var(--primary-black-color);
 }
@@ -140,19 +147,13 @@ a {
   color: var(--secondary-color);
 }
 
-.nav-list {
-  display: flex;
-}
-
 .nav-list > li:not(:last-child) {
-  display: flex;
   margin-right: 50px;
 }
 
 .nav-link {
   display: block;
   padding-top: 31px;
-  padding-bottom: 32px;
 
   font-weight: 500;
   font-size: 14px;
@@ -161,7 +162,14 @@ a {
 
   color: var(--primary-black-color);
 }
+.nav-link > p {
+  margin-bottom: 28px;
+}
 
+.nav-link > svg {
+  margin-left: auto;
+  margin-right: auto;
+}
 address {
   margin-left: auto;
 }
@@ -174,18 +182,26 @@ address {
 .address-list {
   display: flex;
   margin-left: auto;
-  align-items: baseline;
+  align-items: center;
 }
 
 .address-list > li + li {
   margin-left: 30px;
 }
 
+.address-list > li:hover {
+  color: var(--secondary-color);
+  fill: var(--secondary-color);
+}
+
 .address-item {
-  display: block;
+  display: flex;
+  align-items: center;
+
   color: var(--grey-color);
-  padding-top: 31px;
-  padding-bottom: 32px;
+  fill: #757575;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   font-weight: 500;
   font-size: 14px;
@@ -193,9 +209,14 @@ address {
   letter-spacing: 0.02em;
 }
 
+.address-item > svg {
+  margin-right: 10px;
+}
+
 .address-item:hover,
 .address-item:focus {
   color: var(--secondary-color);
+  fill: var(--secondary-color);
 }
 
 /* Main */
@@ -207,8 +228,11 @@ address {
   margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: grey;
-
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/hero-background.jpg);
   text-align: center;
 }
 
@@ -225,15 +249,15 @@ address {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-
 .button-order {
   padding: 10px 52px;
   margin-bottom: 100px;
-
+  width: ;
   color: var(--primary-white-color);
   background-color: var(--secondary-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: transparent;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   font-weight: 700;
   font-size: 16px;

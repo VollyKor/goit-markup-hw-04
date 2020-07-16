@@ -252,7 +252,7 @@ address {
 .button-order {
   padding: 10px 52px;
   margin-bottom: 100px;
-  width: ;
+  
   color: var(--primary-white-color);
   background-color: var(--secondary-color);
   border: transparent;

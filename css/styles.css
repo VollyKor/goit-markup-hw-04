@@ -23,7 +23,7 @@ font-weight: 900;
 */
 
 /*
- область данных 1200px,
+ область данных 1170px,
  крайние отступы 15px
  */
 
@@ -77,7 +77,8 @@ address {
   font-style: normal;
 }
 
-ul {
+ul,
+button {
   margin-top: 0px;
   margin-bottom: 0px;
   list-style: none;
@@ -102,6 +103,11 @@ a {
 
 svg {
   display: block;
+}
+
+.active-link{
+  color: var(--secondary-color);
+  fill: var(--secondary-color);
 }
 
 /* index.html */
@@ -161,7 +167,15 @@ svg {
   letter-spacing: 0.02em;
 
   color: var(--primary-black-color);
+  fill: none;
 }
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--secondary-color);
+  fill: var(--secondary-color);
+}
+
 .nav-link > p {
   margin-bottom: 28px;
 }
@@ -169,14 +183,16 @@ svg {
 .nav-link > svg {
   margin-left: auto;
   margin-right: auto;
-}
-address {
-  margin-left: auto;
+  fill: inherit;
+ }
+
+.current-page{
+  color: var(--secondary-color);
+  fill: var(--secondary-color);
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--secondary-color);
+address {
+  margin-left: auto;
 }
 
 .address-list {
@@ -191,8 +207,7 @@ address {
 
 .address-list > li:hover {
   color: var(--secondary-color);
-  fill: var(--secondary-color);
-}
+  }
 
 .address-item {
   display: flex;
@@ -200,6 +215,7 @@ address {
 
   color: var(--grey-color);
   fill: #757575;
+
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -308,6 +324,11 @@ address {
   border-radius: 4px;
 }
 
+.features-icon {
+  width: 70px;
+  height: 70px;
+}
+
 .features-subtitle {
   margin-bottom: 10px;
 
@@ -387,7 +408,7 @@ section.team {
 
 .team-bio {
   padding-top: 30px;
-  padding-bottom: 32px;
+  padding-bottom: 24px;
   padding-left: 24px;
   padding-right: 24px;
 
@@ -421,12 +442,28 @@ section.team {
   margin-right: 10px;
 }
 
+.bio-link{
+  fill: var(--client-border-color);;
+}
+
+.bio-link:hover,
+.bio-link:focus {
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  fill: var(--primary-white-color);
+}
+
 .bio-link,
 .footer-social-link {
   padding: 12px;
 }
 .bio-link:not(:last-child) {
   margin-right: 10px;
+}
+
+.social-icon{
+  width: 20px;
+  height: 20px;
 }
 
 /* Постоянные клиенты */
@@ -440,11 +477,19 @@ section.team {
   width: 170px;
   height: 90px;
 
+  fill: var(--client-border-color);
+
   border: 1px solid var(--client-border-color);
   border-radius: 4px;
 
   justify-content: center;
   align-items: center;
+}
+
+.client-link:hover,
+.client-link:focus{
+  fill: var(--secondary-color);
+  border-color: var(--secondary-color);   
 }
 
 /* footer */
@@ -506,8 +551,13 @@ footer > .container {
 }
 
 .social-link {
-  display: block;
+  display: flex;
   padding: 12px;
+  
+  fill: var(--primary-white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  
 }
 
 .footer-social {
@@ -522,19 +572,15 @@ footer > .container {
   margin-right: 10px;
 }
 
-.social-item:hover,
-.social-item:focus,
-.bio-link:hover,
-.bio-link:focus {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--secondary-color);
   border-radius: 50%;
 }
 
-.social-link {
-  font-size: 0px;
-}
-
 .footer-subtitle {
+  margin-bottom: 20px;
+
   color: var(--primary-white-color);
 
   font-weight: 700;
@@ -542,16 +588,34 @@ footer > .container {
 }
 
 .sign-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 200px;
+  height: 50px;
+
   color: var(--primary-white-color);
   background-color: var(--secondary-color);
+
   border-radius: 4px;
+  border: none;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-
-  text-align: center;
   letter-spacing: 0.06em;
+}
+
+.sign-icon{
+  fill: var(--primary-white-color);
+
+  width: 24px;
+  height: 24px;
+}
+
+.sign-button > span {
+  margin-right: 10px;
 }
 
 /* Portfolio.html */

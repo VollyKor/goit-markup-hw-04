@@ -26,13 +26,40 @@
         </a>
         <ul class="nav-list">
           <li>
-            <a class="nav-link" href="./index.html">Студия</a>
+            <a class="nav-link " href="./index.html">
+              <p>Студия</p>
+              <svg width="48" height="4" viewBox="0 0 48 4" fill="none">
+                <rect
+                  width="48"
+                  height="4"
+                  rx="2"
+                />
+              </svg>
+            </a>
           </li>
           <li>
-            <a class="nav-link" href="./portfolio.html">Портфолио</a>
+            <a class="nav-link current-page" href="./portfolio.html">
+              <p>Портфолио</p>
+              <svg width="76" height="4" viewBox="0 0 76 4" fill="none">
+                <rect
+                  width="76"
+                  height="4"
+                  rx="2px"
+                />
+              </svg>
+            </a>
           </li>
           <li>
-            <a class="nav-link" href="">Контакты</a>
+            <a class="nav-link" href="">
+              <p>Контакты</p>
+              <svg width="67" height="4" viewBox="0 0 67 4" fill="none">
+                <rect
+                  width="67"
+                  height="4"
+                  rx="2"
+                />
+              </svg>
+            </a>
           </li>
         </ul>
       </nav>
@@ -40,24 +67,18 @@
         <ul class="address-list">
           <li>
             <a class="address-item" href="mailto:info@devstudio.com">
-              <img
-                src="./images/icon-mail.svg"
-                alt="icon mail"
-                width="14"
-                height="10"
-              />
-              info@devstudio.com
+              <svg width="16px" height="11px">
+                <use href="./images/sprite.svg#mail"></use>
+              </svg>
+              <p>info@devstudio.com</p>
             </a>
           </li>
           <li>
             <a class="address-item" href="tel:+380961111111">
-              <img
-                src="./images/icon-smartphone.svg"
-                alt="icon smartphone"
-                width="10"
-                height="14"
-              />
-              +38 096 111 11 11
+              <svg width="10px" height="14px">
+                <use href="./images/sprite.svg#smartphone"></use>
+              </svg>
+              <p>+38 096 111 11 11</p>
             </a>
           </li>
         </ul>
@@ -305,100 +326,93 @@
     <!-- клас футера сменить при стилизации блока -->
     <footer class="footer-background">
       <div class="container flex-box">
+        <!-- контакты -->
+        <div class="footer-contacts">
+          <a
+            class="footer-logo"
+            href="./index.html"
+            aria-label="Логотип Веб студии"
+          >
+            <span>Web</span>
+            Studio
+          </a>
+          <address class="footer-address">
+            <ul>
+              <li>
+                <a
+                  class="footer-city"
+                  href="https://goo.gl/maps/y2QhBPSRQjRxSZP76"
+                  target="_blank"
+                >
+                  г. Киев, пр-т Леси Украинки, 26
+                </a>
+              </li>
+              <li>
+                <a class="footer-mail" href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+              </li>
+              <li>
+                <a class="footer-phone" href="tel:+380991111111"
+                  >+38 099 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
 
-      <!-- контакты -->
-      <div class="footer-contacts">
-        <a
-          class="footer-logo"
-          href="./index.html"
-          aria-label="Логотип Веб студии"
-        >
-          <span>Web</span>
-          Studio
-        </a>
-        <address class="footer-address">
-          <ul >
-            <li>
-              <a
-                class="footer-city"
-                href="https://goo.gl/maps/y2QhBPSRQjRxSZP76"
-                target="_blank"
-              >
-                г. Киев, пр-т Леси Украинки, 26
+        <!-- Соц. ссылки -->
+        <div class="footer-social">
+          <p>
+            <b class="footer-subtitle">Присоединяйтесь</b>
+          </p>
+          <ul class="flex-box">
+            <li class="social-item">
+              <a class="social-link" href="">
+                <svg class="social-icon">
+                  <use href="./images/sprite.svg#instagram"></use>
+                </svg>
               </a>
             </li>
-            <li>
-              <a class="footer-mail" href="mailto:info@example.com"
-                >info@example.com</a
-              >
+            <li class="social-item">
+              <a class="social-link" href="">
+                <svg class="social-icon">
+                  <use href="./images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
             </li>
-            <li>
-              <a class="footer-phone" href="tel:+380991111111"
-                >+38 099 111 11 11</a
-              >
+            <li class="social-item">
+              <a class="social-link" href="">
+                <svg class="social-icon">
+                  <use href="./images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-link" href="">
+                <svg class="social-icon">
+                  <use href="./images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
-      </div>
+        </div>
 
-      <!-- Соц. ссылки -->
-      <div class="footer-social">
-        <p>
-          <b class="footer-subtitle">Присоединяйтесь</b>
-        </p>
-        <ul class="flex-box">
-          <li class="social-item">
-            <a class="social-link" href="">
-              <img
-                src="./images/icon-instagram-white.svg"
-                alt="иконка Инстаграм "
-                width="20"
-                height="20"
-              />
-            </a>
-          </li>
-          <li class="social-item">
-            <a class="social-link" href="">
-              <img
-                src="./images/icon-twitter-white.svg"
-                alt="иконка Твиттера"
-                width="20"
-                height="20"
-              />
-            </a>
-          </li>
-          <li class="social-item">
-            <a class="social-link" href="">
-              <img
-                src="./images/icon-facebook-white.svg"
-                alt="иконка Фейсбука"
-                width="20"
-                height="20"
-              />
-            </a>
-          </li>
-          <li class="social-item">
-            <a  class="social-link" href="">
-              <img
-                src="./images/icon-linkedin-white.svg"
-                alt="иконка Ликедина"
-                width="20"
-                height="20"
-              />
-            </a>
-          </li>
-        </ul>
+        <!-- Форма подпишись -->
+        <div class="form-subscribe">
+          <p class="footer-subtitle">
+            Подпишитесь на рассылку
+            </p>
+            <!-- какаято форма-->
+            <button class="sign-button" type="button">
+              <span>Подписаться</span>  
+              <svg class="sign-icon">
+                <use href="./images/sprite.svg#send"></use>
+              </svg>
+            </button>
+          
+        </div>
       </div>
-
-      <!-- Форма подпишись -->
-      <div class="form-subscribe">
-        <p>
-          <b class="footer-subtitle">Подпишитесь на рассылку</b>
-          <!-- какаято форма-->
-          <button class="sign-button" type="button">Подписаться</button>
-        </p>
-      </div>
-    </div>
       <!-- Форму "Подписывайся" сказали не трогать" -->
     </footer>
   </body>

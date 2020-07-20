@@ -680,6 +680,7 @@ footer > .container {
 .gallery-desc {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 /* Добавить всплывающий текст при событии :hover, :focus  */
